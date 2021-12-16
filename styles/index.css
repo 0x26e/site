@@ -1,17 +1,72 @@
-@font-face {
-    font-family: 'minecraft';
-    src:
-        url('../static/fonts/minecraft.otf') 
-        format('opentype');
-}
-
-body {
-    font-family: 'minecraft', sans-serif;
-    background-color: #262626;
-}
-
+/* Title */
 .title {
     color: white;
     font-size: 150px;
     text-align: center;
+    margin-top: 10%;
+}
+
+/* Body grid */
+.grid-container {
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 56%;
+    margin-left: 22%;
+    height: 500px;
+    /* background-color: crimson; */
+    font-size: 18pt;
+    row-gap: 0px;
+    margin-bottom: 200px;
+}
+
+.grid-item {
+    margin: 5%;
+    height: 500px;
+}
+
+.grid-item iframe {
+    height: 90%;
+}
+
+.subtext {
+    margin-left: 12%;
+}
+
+/* Mobile */
+@media only screen and (max-width: 600px) {
+    /* Title */
+    .title {
+        font-size: 36pt;
+        margin-bottom: 20px;
+    }
+
+    /* Body grid */
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr);
+        width: 80%;
+        margin-left: 10%;
+        font-size: 12pt;
+        height: 600px;
+    }
+
+    .grid-item {
+        margin: 1%;
+    }
+
+    .grid-item iframe {
+        width: 100%;
+    }
+
+    .grid-item:nth-child(2) {
+        margin-left: 9%;
+    }
+
+    .halfrow {
+        height: 100%;
+    }
+
+    .textindent {
+        margin-left: 12%;
+    }
 }
