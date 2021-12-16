@@ -1,0 +1,161 @@
+@font-face {
+    font-family: 'minecraft';
+    src:
+        url('../static/fonts/minecraft.otf') format('opentype');
+}
+
+/* Page content */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'minecraft', sans-serif;
+    background-color: #3b3b3b;
+}
+
+/* Custom Scrollbar */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888888;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555555;
+}
+
+/* Navigation bar */
+
+nav {
+    background-color: #262626;
+    color: white;
+    line-height: 10px;
+    overflow: hidden;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    float: left;
+    /* justify-content: space-evenly;
+    align-items: center; */
+    font-size: 18pt;
+    /* margin-left: 15%;
+    margin-right: 15%; */
+}
+
+nav ul li {
+    padding-left: 6%;
+    padding-right: 6%;
+}
+
+/* Page Footer */
+
+footer {
+    color: white;
+    background-color: #161616;
+    position: absolute;
+    bottom: -999999999;
+    height: 160px;
+    width: 100%;
+}
+
+.footer-container {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-size: 14pt;
+    line-height: 48px;
+}
+
+.footer-item {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    height: 100px;
+}
+
+.footer-item:first-child {
+    text-align: center;
+    line-height: 40px;
+}
+
+.footer-item:nth-child(2) {
+    margin-left: 30%;
+    line-height: 32px;
+}
+
+.footer-item:nth-child(3) {
+    text-align: center;
+    line-height: 40px;
+}
+
+.footer-item a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer-item img {
+    height: 16px;
+}
+
+.footerindent {
+    margin-left: 5%;
+}
+
+/* Mobile */
+@media only screen and (max-width: 600px) {
+    /* Navigation bar */
+    nav ul {
+        font-size: 14pt;
+    }
+
+    /* Page Footer */
+    footer {
+        display: absolute;
+        /* position: relative; */
+        /* height: 120px; */
+    }
+
+    .footer-container {
+        font-size: 10pt;
+        line-height: 40px;
+    }
+    
+    .footer-item {
+        margin-top: 5%;
+    }
+    
+    .footer-item:first-child {
+        line-height: 32px;
+    }
+    
+    .footer-item:nth-child(2) {
+        margin-left: 10%;
+        line-height: 26px;
+        font-size: 10pt;
+    }
+    
+    .footer-item:nth-child(3) {
+        line-height: 32px;
+    }
+
+    .footer-item img {
+        height: 12px;
+    }
+
+    .footerindent {
+        margin-left: 10%;
+    }
+}
